@@ -113,7 +113,7 @@ body {
 /* HERO */
 .hero {
   height: 600px;
-  background: url("../images/Img\ \(9\).jpg") no-repeat center/cover;
+  background: url("../images/hero.jpg") no-repeat center/cover;
   color: #fff;
   display: flex;
   align-items: center;
