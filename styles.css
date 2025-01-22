@@ -126,9 +126,6 @@ body {
   position: absolute;
   z-index: 1;
 }
-.hero > * {
-  z-index: 2;
-}
 
 .hero-title {
   font-size: 44px;
@@ -143,6 +140,7 @@ body {
 }
 .hero-container {
   text-align: center;
+  z-index: 2;
 }
 /* ABOUT */
 .about {
@@ -252,7 +250,7 @@ h3 {
 .team-workers {
   display: flex;
   gap: 30px;
-  padding-bottom: 94px;
+  margin-bottom: 94px;
 }
 .people {
   padding: 30px;
@@ -262,77 +260,72 @@ h3 {
   margin-bottom: 10px;
   font-weight: 500;
 }
-.icons {
-  display: flex;
-  gap: 10px;
-  padding-top: 16px;
+.icon {
+  fill: grey;
+  width: 20px;
+  height: 20px;
 }
-.icons a {
+.nav-item {
   display: flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1) no-repeat center/20px 20px;
   justify-content: center;
   align-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px;
+  border-radius: 50%;
+  transition: all 0.5s linear;
+  outline: none;
 }
-.icons li:nth-child(1) a {
-  background-image: url(images/instagram.svg);
+.nav-item:hover {
+  background-color: #2196f3;
 }
-.icons li:nth-child(2) a {
-  background-image: url(images/twitter.svg);
+.nav-item:hover .icon {
+  fill: #fff;
 }
-.icons li:nth-child(3) a {
-  background-image: url(images/facebook.svg);
-}
-.icons li:nth-child(4) a {
-  background-image: url(images/linkedin.svg);
-}
-.icons a:hover {
-  background-color: #2a91ff;
+.nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding-top: 16px;
 }
 
 /* Regular customers */
+.Regular-customers {
+  padding: 94px;
+}
 .customers-title {
   text-align: center;
-  padding: 94px 0;
+  margin: 0 0 50px;
 }
 h1 {
   font-weight: 700;
 }
-.companies {
+
+.customers-cards {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
 }
-.companies > div {
-  flex: 1 1 14%;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  width: 170px;
-  height: 92px;
-  margin-bottom: 94px;
+.customers-card {
+  border: 2px solid #afb1b8;
+  display: flex;
+  border-radius: 2px;
+  justify-content: center;
   align-items: center;
-  background: #fff url(images/Logo.svg) no-repeat center / 106px 60px;
-  white-space: nowrap;
+  flex: 1 1 16%;
+  height: 92px;
+  transition: all 1s linear;
 }
-.companies > div:nth-child(2) {
-  background-image: url(images/Logo-2.svg);
-}
-.companies > div:nth-child(3) {
-  background-image: url(images/Logo-3.svg);
-}
-.companies > div:nth-child(4) {
-  background-image: url(images/Logo-4.svg);
-}
-.companies > div:nth-child(5) {
-  background-image: url(images/Logo-5.svg);
-}
-.companies > div:nth-child(6) {
-  background-image: url(images/Logo-6.svg);
-}
-.companies > div:hover {
+.customers-card:hover {
   border-color: #2196f3;
+}
+.customers-card:hover .customers-card-icon {
+  fill: #2196f3;
+}
+.customers-card-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+  transition: all 1s linear;
 }
 
 /* FOOTER */
@@ -386,37 +379,33 @@ p {
 }
 .join-us p {
   font-size: 14px;
-  margin-bottom: 20px;
   text-align: left;
   text-transform: uppercase;
   color: white;
 }
-.footer-icons {
+.nav-footer {
   display: flex;
   gap: 10px;
+  justify-content: center;
+  padding-top: 16px;
 }
-.footer-icons li a {
+.nav-item-footer {
   display: flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1) no-repeat center/20px 20px;
   justify-content: center;
   align-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px;
+  border-radius: 50%;
+  background-color: #ffffff1a;
+  transition: all 1s linear;
+  outline: none;
 }
-
-.footer-icons li:nth-child(1) a {
-  background-image: url(images/instagram-footer.png);
+.icon-footer {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
 }
-.footer-icons li:nth-child(2) a {
-  background-image: url(images/twitter-footer.png);
-}
-.footer-icons li:nth-child(3) a {
-  background-image: url(images/facebook-footer.png);
-}
-.footer-icons li:nth-child(4) a {
-  background-image: url(images/linkedin-footer.png);
-}
-.footer-icons a:hover {
-  background-color: #2a91ff;
+.nav-item-footer:hover {
+  background-color: #2196f3;
 }
